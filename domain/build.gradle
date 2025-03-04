@@ -1,0 +1,19 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '2.1.10'
+}
+
+group = 'rb.for_flo.domain'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    testImplementation("com.willowtreeapps.assertk:assertk:$assertKVersion")
+}
+
+test {
+    useJUnitPlatform()
+}

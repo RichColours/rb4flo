@@ -1,0 +1,26 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '2.1.10'
+    id 'application'
+}
+
+group = 'rb.for_flo.domain'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':domain')
+    implementation project(':nem-processing')
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    testImplementation("com.willowtreeapps.assertk:assertk:$assertKVersion")
+}
+
+application {
+    mainClass = 'rb.for_flo.nem12_csv_processor.Main'
+}
+
+test {
+    useJUnitPlatform()
+}
